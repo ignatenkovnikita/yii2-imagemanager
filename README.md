@@ -2,6 +2,18 @@ Yii2 Image Manager
 ==================
 Yii2 Image Manager
 
+
+
+
+[![Latest Stable Version](https://poser.pugx.org/ignatenkovnikita/yii2-imagemanager/v/stable)](https://packagist.org/packages/ignatenkovnikita/yii2-imagemanager) 
+[![Total Downloads](https://poser.pugx.org/ignatenkovnikita/yii2-imagemanager/downloads)](https://packagist.org/packages/ignatenkovnikita/yii2-imagemanager) 
+[![Latest Unstable Version](https://poser.pugx.org/ignatenkovnikita/yii2-imagemanager/v/unstable)](https://packagist.org/packages/ignatenkovnikita/yii2-imagemanager) 
+[![License](https://poser.pugx.org/ignatenkovnikita/yii2-sendpulse/license)](https://packagist.org/packages/ignatenkovnikita/yii2-imagemanager)
+
+
+
+
+
 Installation
 ------------
 
@@ -97,7 +109,7 @@ public function getProductAttachment()
 
 
 Add widget on view
-```html
+```php
 
 <?php echo $form->field($model, 'attachment')->widget(
     Upload::className(),
