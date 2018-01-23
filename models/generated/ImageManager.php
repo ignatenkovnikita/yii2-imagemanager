@@ -67,4 +67,10 @@ class ImageManager extends \yii\db\ActiveRecord
     {
         return new ImageManagerQuery(get_called_class());
     }
+
+
+    public function getFull()
+    {
+        return $this->base_url . DIRECTORY_SEPARATOR . $this->path;
+    }
 }
