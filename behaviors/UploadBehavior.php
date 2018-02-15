@@ -53,6 +53,11 @@ class UploadBehavior extends \trntv\filekit\behaviors\UploadBehavior
      */
     protected function saveFilesToRelation($files)
     {
+        if(is_array($files)){
+            if(isset($files['path'])){
+                $files = [$files];
+            }
+        }
         $modelClass = $this->getUploadModelClass();
         foreach ($files as $file) {
             $model = new $modelClass;
