@@ -33,6 +33,11 @@ or add
 
 to the require section of your `composer.json` file.
 
+Apply migration
+```bash
+php yii migrate --migrationPath=vendor/ignatenkovnikita/yii2-imagemanager/migrations/
+```
+
 
 Usage
 -----
