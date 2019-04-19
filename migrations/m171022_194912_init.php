@@ -4,7 +4,7 @@ use yii\db\Migration;
 
 class m171022_194912_init extends Migration
 {
-    const NAME = '{{image_manager}}';
+    const NAME = '{{%image_manager}}';
 
     public function safeUp()
     {
@@ -29,9 +29,7 @@ class m171022_194912_init extends Migration
 
     public function safeDown()
     {
-        echo "m171022_194912_init cannot be reverted.\n";
-
-        return false;
+        $this->dropTable(self::NAME);
     }
 
     /*

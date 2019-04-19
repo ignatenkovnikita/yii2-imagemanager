@@ -7,15 +7,15 @@ use yii\db\Migration;
  */
 class m181020_081444_add_index extends Migration
 {
-    const NAME = '{{image_manager}}';
+    const NAME = '{{%image_manager}}';
 
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->createIndex('image_manager_owner_id',self::NAME,'owner_id');
-        $this->createIndex('image_manager_tag',self::NAME,'tag');
+        $this->createIndex('image_manager_owner_id', self::NAME, 'owner_id');
+        $this->createIndex('image_manager_tag', self::NAME, 'tag');
 
     }
 
@@ -24,9 +24,8 @@ class m181020_081444_add_index extends Migration
      */
     public function safeDown()
     {
-        echo "m181020_081444_add_index cannot be reverted.\n";
-
-        return false;
+        $this->dropIndex('image_manager_owner_id', self::NAME);
+        $this->dropIndex('image_manager_tag', self::NAME);
     }
 
     /*
